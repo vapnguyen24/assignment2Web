@@ -245,7 +245,7 @@
 }
 
 .content-container .left-content div h3:hover{
-    color: rgba(0, 101, 238) !important;
+    color: rgba(0, 101, 238);
     cursor: pointer;
 }
 
