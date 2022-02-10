@@ -9,6 +9,36 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "107806398493534");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v13.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <header>     
         <nav>
             <label class="logo">
@@ -19,7 +49,7 @@
                 <li><a href="introduce.html">Giới thiệu</a></li>
 
                 <li>
-                    <a href="product.html">Sản Phẩm<i class='bx bx-chevron-down'></i></a>
+                    <a href="products-page.html">Sản Phẩm<i class='bx bx-chevron-down'></i></a>
                     <ul class="sub-menu">
                         <li><a href="">Laptop</a></li>
                         <li><a href="">Máy tính bàn</a></li>
